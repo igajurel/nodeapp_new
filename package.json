@@ -1,7 +1,31 @@
 {
-  "requires": true,
-  "lockfileVersion": 1,
+  "name": "ishan-node-app",
+  "version": "1.0.0",
+  "description": "Ishan's first Node.js application",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igajurel/nodeapp.git"
+  },
+  "keywords": [
+    "node",
+    "ishan",
+    "app",
+    "learn",
+    "python",
+    "data"
+  ],
+  "author": "Ishan Gajurel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igajurel/nodeapp/issues"
+  },
+  "homepage": "https://github.com/igajurel/nodeapp#readme",
   "dependencies": {
-    "python-shell": "file:python-shell-master"
+    "python-shell": "^1.0.8"
   }
 }
