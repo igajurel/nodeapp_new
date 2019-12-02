@@ -19,17 +19,18 @@
 # a[k]=a[4]=6; j=2 (max-cap)
 
 def sortuserages(input_list):
+	#input_list = [3,2,7,6,4]
 	#print(input_list)
 	if(len(input_list)>=1):
 		#input_list = input_list
 		size_orig_array = len(input_list)
 		mid_orig_array = len(input_list)/2
-		left_array = input_list[0:mid_orig_array]
-		right_array = input_list[mid_orig_array:size_orig_array]
-		print("#############")
-		print(input_list)
-		print(left_array)
-		print(right_array)
+		left_array = input_list[0:int(mid_orig_array)]
+		right_array = input_list[int(mid_orig_array):size_orig_array]
+		#print("#############")
+		#print(input_list)
+		#print(left_array)
+		#print(right_array)
 
 		if(len(left_array))>1:
 			sortuserages(left_array)	
@@ -44,9 +45,9 @@ def sortuserages(input_list):
 		main_index = 0
 		#input_list = []
 		while(left_index<len(left_array) and right_index<len(right_array)):
-			print("==========")
-			print(left_index)
-			print(right_index)
+			#print("==========")
+			#print(left_index)
+			#print(right_index)
 			if(left_array[left_index] < right_array[right_index]):
 				input_list[main_index]=left_array[left_index]
 				left_index = left_index+1
@@ -73,11 +74,10 @@ def sortuserages(input_list):
 			main_index = main_index+1
 
 
-		print("----Sorted List Below----")
+		#print("----Sorted List Below----")
 		print(input_list)
 
-	#return None
+	return None
 
-#sortuserages([3,2,1,4,6])
-print(sortuserages([3,2,7,6,4]))
-#sortuserages([3,2])
+print('[3,2,7,6,4]')
+sortuserages([3,2,7,6,4])

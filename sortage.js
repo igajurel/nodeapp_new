@@ -10,12 +10,17 @@ let {PythonShell} = require('python-shell')
 
 PythonShell.runString('x=1+2;print(x)',null,function(err){
     if(err) throw err;
-    console.log('finished1');
+    //console.log('finished1');
 });
 
 PythonShell.run('age_sorter1.py',null,function(err, results){
     if(err) throw err;
-    console.log('finished2', results);
+    //console.log('finished2', results);
+});
+
+PythonShell.run('age_sorter.py',null,function(err, results){
+    if(err) throw err;
+    console.log('finished3', results);
 });
 
 var methods = {
