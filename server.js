@@ -7,8 +7,15 @@ var fs = require('fs');
 var querystring = require('querystring');
 
 //calling another js script file with python logic
+/* 
 var another = require('./sortage.js');
 console.log(another);
+another.data.timestamp();
+another.data.currentDate(); 
+*/
+
+var another1 = require('./sortage.js')(48);
+console.log(another1);
 
 http.createServer(function(request, response){
     response.writeHead(200, {'Content-Type':'text/html'});
