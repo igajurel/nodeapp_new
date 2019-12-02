@@ -6,6 +6,10 @@ var http = require('http');
 var fs = require('fs');
 var querystring = require('querystring');
 
+//calling another js script file with python logic
+var another = require('./sortage.js');
+console.log(another);
+
 http.createServer(function(request, response){
     response.writeHead(200, {'Content-Type':'text/html'});
     let x=''
