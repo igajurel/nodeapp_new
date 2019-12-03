@@ -18,10 +18,18 @@ PythonShell.run('age_sorter1.py',null,function(err, results){
     //console.log('finished2', results);
 });
 
-PythonShell.run('age_sorter.py',null,function(err, results){
-    if(err) throw err;
-    console.log('finished3', results);
-});
+var age_sorted = [];
+
+var age_sorter_fn = function(input_age_list){
+    PythonShell.run('age_sorter.py',{args: input_age_list},function(err, results){
+        if(err) throw err;
+        age_sorted = results[results.length-1];
+        console.log('Sorted Age is:', age_sorted);
+        console.log(typeof(age_sorted));
+    });
+    return input_age_list;
+    //return age_sorted;
+};
 
 var methods = {
     timestamp: function(){
@@ -39,5 +47,7 @@ var methods = {
 var level = function(num) {
 	return num > 40 ? "It's over 40!" : num;
 };
-module.exports = level;
+//module.exports = level;
 //module.exports = methods;
+
+module.exports = age_sorter_fn;

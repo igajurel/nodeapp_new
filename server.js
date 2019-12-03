@@ -14,7 +14,8 @@ another.data.timestamp();
 another.data.currentDate(); 
 */
 
-var another1 = require('./sortage.js')(48);
+var input_age_list = [3,2,1,5,4];
+var another1 = require('./sortage.js')(input_age_list);
 console.log(another1);
 
 http.createServer(function(request, response){

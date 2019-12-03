@@ -79,5 +79,9 @@ def sortuserages(input_list):
 
 	return None
 
-print('[3,2,7,6,4]')
-sortuserages([3,2,7,6,4])
+#print('[3,2,7,6,4]')
+import sys
+
+for v in sys.stdin:
+	print(v)
+    sortuserages(v)
