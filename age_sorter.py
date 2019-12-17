@@ -79,9 +79,14 @@ def sortuserages(input_list):
 
 	return None
 
-#print('[3,2,7,6,4]')
 import sys
 
-for v in sys.stdin:
-	print(v)
-    sortuserages(v)
+print('Input to python file is=>',sys.argv[1:])
+
+inp_list = []
+
+for v in sys.argv[1:]:
+	item = int(v)
+	inp_list.append(item)
+	
+sortuserages(inp_list)

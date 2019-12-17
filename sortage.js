@@ -25,9 +25,26 @@ var age_sorter_fn = function(input_age_list){
         if(err) throw err;
         age_sorted = results[results.length-1];
         console.log('Sorted Age is:', age_sorted);
-        console.log(typeof(age_sorted));
+        console.log(typeof(JSON.stringify(age_sorted)));
     });
-    return input_age_list;
+    //return '404040404';
+    return age_sorted.toString;
+    //return age_sorted;
+    //return age_sorted;
+};
+
+
+var age_sorter_fn1 = function(input_age_list){
+    PythonShell.run('age_sorter1.py',{args: input_age_list},function(err, results){
+        if(err) throw err;
+        console.log('ishan here');
+        console.log(results);
+        //age_sorted = results[results.length-1];
+        //console.log('Sorted Age is:', age_sorted);
+        //console.log(typeof(age_sorted));
+    });
+    return [5,8,6]
+    //input_age_list;
     //return age_sorted;
 };
 
@@ -51,3 +68,4 @@ var level = function(num) {
 //module.exports = methods;
 
 module.exports = age_sorter_fn;
+//module.exports = age_sorter_fn1;

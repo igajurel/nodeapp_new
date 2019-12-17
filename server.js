@@ -14,9 +14,10 @@ another.data.timestamp();
 another.data.currentDate(); 
 */
 
-var input_age_list = [3,2,1,5,4];
+var input_age_list = [7,5,6];
+console.log('Input=',input_age_list);
 var another1 = require('./sortage.js')(input_age_list);
-console.log(another1);
+console.log('Output=',another1);
 
 http.createServer(function(request, response){
     response.writeHead(200, {'Content-Type':'text/html'});
