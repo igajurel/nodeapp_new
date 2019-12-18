@@ -20,17 +20,17 @@ PythonShell.run('age_sorter1.py',null,function(err, results){
 
 var age_sorted = [];
 
-var age_sorter_fn = function(input_age_list){
+var age_sorter_fn = function(input_age_list,callback_fn_temp){
     PythonShell.run('age_sorter.py',{args: input_age_list},function(err, results){
-        if(err) throw err;
+        if(err) {
+            return callback_fn_temp(err);
+        }
         age_sorted = results[results.length-1];
-        console.log('Sorted Age is:', age_sorted);
-        console.log(typeof(JSON.stringify(age_sorted)));
+        //console.log('Sorted Age is:', age_sorted);
+        //console.log(typeof(JSON.stringify(age_sorted)));
+        callback_fn_temp(null,age_sorted);       
     });
     //return '404040404';
-    return age_sorted.toString;
-    //return age_sorted;
-    //return age_sorted;
 };
 
 
